@@ -140,6 +140,7 @@
     color: var(--accent);
     margin: 0 0 1.4rem;
   }
+  h1 .amp { font-family: var(--font-text); font-style: italic; color: var(--accent); }
   h1 {
     font-family: var(--font-display);
     font-weight: 400;
@@ -150,7 +151,6 @@
     text-wrap: balance;
     max-width: 15ch;
   }
-  h1 .amp { font-family: var(--font-text); font-style: italic; color: var(--accent); }
   .subtitle {
     font-family: var(--font-text);
     font-style: italic;
@@ -160,31 +160,11 @@
     color: var(--ink);
   }
   .byline {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 0.75rem 2rem;
     margin-top: 2.25rem;
     padding-top: 1.25rem;
     border-top: 1px solid var(--rule);
-    font-family: var(--font-label);
   }
-  .byline .name { font-size: var(--step-1); font-weight: 500; letter-spacing: 0.01em; }
-  .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: var(--step--1);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-  .status::before {
-    content: "";
-    width: 0.5rem; height: 0.5rem;
-    border-radius: 50%;
-    background: var(--accent);
-  }
+  .byline .name { font-family: var(--font-text); font-size: var(--step-1); }
 
   /* The two constitutional clauses */
   .clauses {
@@ -206,7 +186,8 @@
   }
   .clause blockquote {
     margin: 0;
-    font-family: var(--font-display);
+    font-family: var(--font-text);
+    font-style: italic;
     font-size: var(--step-2);
     line-height: 1.25;
     text-wrap: balance;
@@ -223,7 +204,7 @@
   /* Sections */
   section { padding: clamp(2.5rem, 6vw, 4.25rem) 0 0; }
   h2 {
-    font-family: var(--font-display);
+    font-family: var(--font-text);
     font-weight: 400;
     font-size: var(--step-2);
     line-height: 1.2;
@@ -259,18 +240,17 @@
     border-bottom: 1px solid var(--rule);
   }
   .pathway .num {
-    font-family: var(--font-display);
+    font-family: var(--font-text);
     font-size: var(--step-2);
     line-height: 1;
     color: var(--accent);
   }
   .pathway h3 {
-    font-family: var(--font-label);
-    font-size: var(--step--1);
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    margin: 0.2rem 0 0.45rem;
+    font-family: var(--font-text);
+    font-size: var(--step-1);
+    font-weight: 400;
+    line-height: 1.3;
+    margin: 0 0 0.35rem;
   }
   .pathway p { margin: 0; max-width: 38rem; }
   .pathway .gloss { display: block; margin-top: 0.35rem; font-style: italic; color: var(--muted); }
@@ -295,7 +275,7 @@
     font-variant-numeric: tabular-nums;
   }
   .question h3 {
-    font-family: var(--font-display);
+    font-family: var(--font-text);
     font-weight: 400;
     font-size: var(--step-1);
     line-height: 1.3;
@@ -313,7 +293,7 @@
   }
   .funding p { margin: 0; }
   .funding .funder {
-    font-family: var(--font-display);
+    font-family: var(--font-text);
     font-size: var(--step-2);
     line-height: 1.2;
     margin-bottom: 0.4rem;
@@ -372,7 +352,7 @@
 <div class="page">
 
   <header class="running-head">
-    <span><strong>Ogembo</strong> &middot; Forthcoming monograph</span>
+    <span><strong>Daisy Ogembo</strong></span>
     <span>Kenya &middot; South Africa</span>
   </header>
 
@@ -385,8 +365,6 @@
         <p class="subtitle">Case Studies from Kenya and South Africa</p>
         <div class="byline">
           <span class="name">Dr Daisy Ogembo</span>
-          <span class="status">Manuscript in preparation</span>
-          <span class="status">Research funded by the British Academy</span>
         </div>
       </div>
     </div>
