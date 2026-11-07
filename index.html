@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Transformative Constitutionalism, Taxation, and State-Building</title>
+<meta name="description" content="A forthcoming monograph by Dr Daisy Ogembo on how transformative constitutions interact with tax systems, with case studies from Kenya and South Africa. Based on research funded by the British Academy.">
+<meta name="author" content="Daisy Ogembo">
+<meta property="og:type" content="book">
+<meta property="og:title" content="Transformative Constitutionalism, Taxation, and State-Building: Case Studies from Kenya and South Africa">
+<meta property="og:description" content="A forthcoming monograph by Dr Daisy Ogembo, based on research funded by the British Academy.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "Transformative Constitutionalism, Taxation, and State-Building: Case Studies from Kenya and South Africa",
+  "author": {
+    "@type": "Person",
+    "name": "Daisy Ogembo",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "International Centre for Tax and Development, Institute of Development Studies"
+    }
+  },
+  "funder": { "@type": "Organization", "name": "The British Academy" },
+  "about": ["Transformative constitutionalism", "Tax law", "Constitutional law", "Kenya", "South Africa"],
+  "inLanguage": "en-GB",
+  "creativeWorkStatus": "In preparation"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* Layout idea: a law-report page. A narrow margin column carries paragraph
+     numbers, citations and jurisdiction codes; the main column carries the text.
+     The one bold move is the title, set large in Caslon. */
+  :root {
+    --paper: #f1f2ee;
+    --surface: #e6e8e2;
+    --ink: #17201b;
+    --muted: #56615a;
+    --rule: #c7ccc4;
+    --accent: #1d5942;
+
+    --font-display: "Libre Caslon Display", "Big Caslon", "Iowan Old Style", Georgia, serif;
+    --font-text: "Libre Caslon Text", "Iowan Old Style", Georgia, "Times New Roman", serif;
+    --font-label: "Libre Franklin", "Franklin Gothic Book", "Helvetica Neue", Arial, sans-serif;
+
+    --step--1: 0.8125rem;
+    --step-0: 1.0625rem;
+    --step-1: 1.3rem;
+    --step-2: 1.65rem;
+    --step-4: clamp(2.5rem, 6.6vw, 5.4rem);
+
+    --margin-col: 9.5rem;
+    --gap: clamp(1.25rem, 3vw, 2.75rem);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101613;
+      --surface: #18201c;
+      --ink: #e4e8e2;
+      --muted: #9ba69f;
+      --rule: #2d3832;
+      --accent: #84c3a3;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101613;
+    --surface: #18201c;
+    --ink: #e4e8e2;
+    --muted: #9ba69f;
+    --rule: #2d3832;
+    --accent: #84c3a3;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-text);
+    font-size: var(--step-0);
+    line-height: 1.65;
+  }
+  a { color: var(--accent); text-underline-offset: 0.18em; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  .page {
+    max-width: 68rem;
+    margin: 0 auto;
+    padding: 0 max(1.25rem, 4vw);
+  }
+
+  /* Running head, like the top line of a law report */
+  .running-head {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    padding: 1.1rem 0 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .running-head strong { font-weight: 600; color: var(--ink); }
+
+  /* Shared two-column row: margin note + body */
+  .row {
+    display: grid;
+    grid-template-columns: var(--margin-col) minmax(0, 1fr);
+    gap: var(--gap);
+  }
+  .margin {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding-top: 0.35rem;
+  }
+  .measure { max-width: 40rem; }
+
+  /* Hero */
+  .hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0 clamp(2rem, 5vw, 3.5rem); }
+  .eyebrow {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.4rem;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--step-4);
+    line-height: 1.02;
+    letter-spacing: -0.012em;
+    margin: 0;
+    text-wrap: balance;
+    max-width: 15ch;
+  }
+  h1 .amp { font-family: var(--font-text); font-style: italic; color: var(--accent); }
+  .subtitle {
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: var(--step-2);
+    line-height: 1.3;
+    margin: 1.2rem 0 0;
+    color: var(--ink);
+  }
+  .byline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.75rem 2rem;
+    margin-top: 2.25rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--rule);
+    font-family: var(--font-label);
+  }
+  .byline .name { font-size: var(--step-1); font-weight: 500; letter-spacing: 0.01em; }
+  .status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--step--1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .status::before {
+    content: "";
+    width: 0.5rem; height: 0.5rem;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* The two constitutional clauses */
+  .clauses {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+  }
+  .clause { padding: 1.5rem 1.75rem 1.6rem 0; }
+  .clause + .clause { padding-left: 1.75rem; border-left: 1px solid var(--rule); }
+  .clause cite {
+    display: block;
+    font-style: normal;
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    letter-spacing: 0.04em;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+  }
+  .clause blockquote {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+  .clause-lead { margin: 1.4rem 0 0; font-size: var(--step-1); line-height: 1.5; }
+  .source {
+    margin: 0.75rem 0 0;
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    letter-spacing: 0.02em;
+    color: var(--muted);
+  }
+
+  /* Sections */
+  section { padding: clamp(2.5rem, 6vw, 4.25rem) 0 0; }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--step-2);
+    line-height: 1.2;
+    margin: 0 0 1.25rem;
+    text-wrap: balance;
+  }
+
+  /* Numbered paragraphs, as in a judgment */
+  .paras { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; counter-reset: para; }
+  .paras li {
+    display: grid;
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    gap: 0.5rem;
+    counter-increment: para;
+  }
+  .paras li::before {
+    content: "[" counter(para) "]";
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    color: var(--muted);
+    padding-top: 0.28rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .paras p { margin: 0; }
+
+  /* Pathways */
+  .pathways { list-style: none; margin: 0.5rem 0 0; padding: 0; border-top: 1px solid var(--rule); }
+  .pathway {
+    display: grid;
+    grid-template-columns: 3.25rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 1.35rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .pathway .num {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1;
+    color: var(--accent);
+  }
+  .pathway h3 {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 0.2rem 0 0.45rem;
+  }
+  .pathway p { margin: 0; max-width: 38rem; }
+  .pathway .gloss { display: block; margin-top: 0.35rem; font-style: italic; color: var(--muted); }
+  .dimensions { margin: 1.25rem 0 0; color: var(--muted); max-width: 40rem; }
+
+  /* Questions the book takes up */
+  .questions { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .question {
+    display: grid;
+    grid-template-columns: var(--margin-col) minmax(0, 1fr);
+    gap: var(--gap);
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .jur {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    padding-top: 0.45rem;
+    font-variant-numeric: tabular-nums;
+  }
+  .question h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: var(--step-1);
+    line-height: 1.3;
+    margin: 0 0 0.35rem;
+    text-wrap: balance;
+  }
+  .question p { margin: 0; color: var(--muted); max-width: 38rem; }
+
+  /* Funding and author */
+  .funding {
+    background: var(--surface);
+    padding: 1.5rem 1.75rem;
+    border-left: 3px solid var(--accent);
+    max-width: 40rem;
+  }
+  .funding p { margin: 0; }
+  .funding .funder {
+    font-family: var(--font-display);
+    font-size: var(--step-2);
+    line-height: 1.2;
+    margin-bottom: 0.4rem;
+  }
+  .bio p { margin: 0 0 1rem; }
+
+  .coming {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .coming li {
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    letter-spacing: 0.04em;
+    padding: 0.4rem 0.8rem;
+    border: 1px dashed var(--rule);
+    color: var(--muted);
+  }
+
+  footer {
+    margin-top: clamp(3rem, 7vw, 5rem);
+    padding: 1.25rem 0 2.5rem;
+    border-top: 1px solid var(--ink);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.5rem 1.5rem;
+    font-family: var(--font-label);
+    font-size: var(--step--1);
+    color: var(--muted);
+  }
+
+  @media (max-width: 760px) {
+    :root { --margin-col: 1fr; }
+    .row, .question { grid-template-columns: 1fr; gap: 0.5rem; }
+    .margin { padding-top: 0; }
+    .jur { padding-top: 0; }
+    .clauses { grid-template-columns: 1fr; }
+    .clause { padding: 1.25rem 0; }
+    .clause + .clause { padding-left: 0; border-left: 0; border-top: 1px solid var(--rule); }
+  }
+  @media (max-width: 420px) {
+    .paras li { grid-template-columns: 2.1rem minmax(0, 1fr); }
+    .pathway { grid-template-columns: 2.5rem minmax(0, 1fr); }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    a { transition: color 0.15s ease; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header class="running-head">
+    <span><strong>Ogembo</strong> &middot; Forthcoming monograph</span>
+    <span>Kenya &middot; South Africa</span>
+  </header>
+
+  <main>
+    <div class="hero row">
+      <div class="margin" aria-hidden="true">Working title</div>
+      <div>
+        <p class="eyebrow">A forthcoming monograph</p>
+        <h1>Transformative Constitutionalism, Taxation, <span class="amp">and</span> State-Building</h1>
+        <p class="subtitle">Case Studies from Kenya and South Africa</p>
+        <div class="byline">
+          <span class="name">Dr Daisy Ogembo</span>
+          <span class="status">Manuscript in preparation</span>
+          <span class="status">Research funded by the British Academy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" aria-labelledby="promise-label">
+      <div class="margin" id="promise-label">The promise</div>
+      <div>
+        <div class="clauses">
+          <figure class="clause" style="margin:0">
+            <cite>Constitution of Kenya 2010, art&nbsp;201(b)(i)</cite>
+            <blockquote>&ldquo;the burden of taxation shall be shared fairly&rdquo;</blockquote>
+          </figure>
+          <figure class="clause" style="margin:0">
+            <cite>Constitution of the Republic of South Africa 1996, s&nbsp;33(1)</cite>
+            <blockquote>&ldquo;Everyone has the right to administrative action that is lawful, reasonable and procedurally fair.&rdquo;</blockquote>
+          </figure>
+        </div>
+        <p class="clause-lead measure">Traditional constitutions are mainly concerned with organising and limiting state power. Kenya&rsquo;s and South Africa&rsquo;s do more. They also guarantee rights, place sovereignty with the people, and commit the state to democratic participation and equality. Karl Klare described this as a long-term project to transform a country&rsquo;s institutions and power relationships in a &ldquo;democratic, participatory, and egalitarian direction&rdquo;. Its effect on tax is the subject of this book.</p>
+        <p class="source">Karl E Klare, &lsquo;Legal Culture and Transformative Constitutionalism&rsquo; (1998) 14 SAJHR 146, 150</p>
+      </div>
+    </div>
+
+    <section class="row" aria-labelledby="h-question">
+      <div class="margin">About the book</div>
+      <div class="measure">
+        <h2 id="h-question">Why tax?</h2>
+        <ol class="paras">
+          <li><p>Scholarship on transformative constitutionalism has followed the commitments of Kenya&rsquo;s 2010 Constitution and South Africa&rsquo;s 1996 Constitution into housing, health and equality. Tax has received far less attention.</p></li>
+          <li><p>Tax law sits awkwardly within the transformative project. It raises revenue for public purposes, but it is built from private law concepts such as property and contract, and from technical rules of statutory interpretation. Constitutional values of fairness, participation and redistribution unsettle that body of law. The book follows how courts, tax authorities and legislatures in Kenya and South Africa have handled the friction.</p></li>
+          <li><p>It is the first book-length study of the subject. It also uses tax as a test case for a wider question about transformative constitutions: under what conditions does a constitutional commitment change settled law?</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-argument">
+      <div class="margin">The argument</div>
+      <div>
+        <h2 id="h-argument" class="measure">Transformation can consolidate, stall or dissipate</h2>
+        <p class="measure" style="margin:0 0 1.25rem">The book treats transformation as a cumulative constitutional effect that develops over time, and identifies three interconnected pathways.</p>
+        <ol class="pathways">
+          <li class="pathway">
+            <span class="num" aria-hidden="true">I</span>
+            <div>
+              <h3>Transformative <em>but</em></h3>
+              <p>Constitutional principles shift tax doctrine, but unresolved legal questions, gaps in implementation, or new complexities created by the judgments themselves stop the change from settling. The result is movement without consolidation.</p>
+            </div>
+          </li>
+          <li class="pathway">
+            <span class="num" aria-hidden="true">II</span>
+            <div>
+              <h3>Neutralised potential</h3>
+              <p>Constitutional principles chart a route to change, which is then diverted by structural limits, scarce resources, institutional failure or incoherent policy.</p>
+            </div>
+          </li>
+          <li class="pathway">
+            <span class="num" aria-hidden="true">III</span>
+            <div>
+              <h3>Counter-transformative</h3>
+              <p>Constitutional requirements are met in form only. Without a culture of constitutionalism to give them substance, public participation can become a box-ticking exercise, trust between the state and taxpayers breaks down, and tax policy moves against the constitution&rsquo;s aims.</p>
+            </div>
+          </li>
+        </ol>
+        <p class="dimensions">The pathways are traced across three dimensions: the courts, the institutions that make and administer tax, and the relationship between the state and taxpayers.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="h-tidbits">
+      <div class="row">
+        <div class="margin">From the book</div>
+        <h2 id="h-tidbits">Questions the book takes up</h2>
+      </div>
+      <ol class="questions">
+        <li class="question">
+          <span class="jur" title="Kenya">KE</span>
+          <div>
+            <h3>Can a tax treaty be unconstitutional?</h3>
+            <p>The challenge to the Kenya&ndash;Mauritius double taxation agreement, and the constitutional limits on how Kenya concludes tax treaties.</p>
+          </div>
+        </li>
+        <li class="question">
+          <span class="jur" title="South Africa">ZA</span>
+          <div>
+            <h3>Should unclear tax laws still be read in the taxpayer&rsquo;s favour?</h3>
+            <p>South African courts have long resolved ambiguity in tax statutes against the revenue authority under the <i>contra fiscum</i> rule. The Constitution brings a competing idea of fairness, and the courts have yet to settle which should prevail.</p>
+          </div>
+        </li>
+        <li class="question">
+          <span class="jur" title="Kenya">KE</span>
+          <div>
+            <h3>When does public participation on a finance bill count?</h3>
+            <p>How Kenyan courts have tested the constitutional duty to consult the public on finance bills, and the protests that followed when consultation made little difference.</p>
+          </div>
+        </li>
+        <li class="question">
+          <span class="jur" title="Kenya">KE</span>
+          <div>
+            <h3>Is a delayed VAT refund a constitutional problem?</h3>
+            <p>Refunds and the right to fair administrative action under article&nbsp;47 of the Kenyan Constitution.</p>
+          </div>
+        </li>
+        <li class="question">
+          <span class="jur" title="Kenya and South Africa">KE &middot; ZA</span>
+          <div>
+            <h3>Should taxpayers pay before they argue, or argue before they pay?</h3>
+            <p>South Africa&rsquo;s default is &ldquo;pay now, argue later&rdquo;, tempered by a statutory power to suspend payment. Kenya&rsquo;s Tax Procedures Act 2015 took the reverse position, &ldquo;argue first, pay later&rdquo;, but successive Finance Bills have eroded it. Since the Finance Act 2025, a taxpayer must deposit 15% of the disputed tax, or give a bank guarantee, to appeal beyond the Tax Appeals Tribunal.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="row" aria-labelledby="h-funding">
+      <div class="margin" id="h-funding">Funding</div>
+      <div class="funding">
+        <p class="funder">The British Academy</p>
+        <p>The book is based on a research project funded by the British Academy through a Postdoctoral Fellowship.</p>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-author">
+      <div class="margin">The author</div>
+      <div class="measure bio">
+        <h2 id="h-author">Dr Daisy Ogembo</h2>
+        <p>Daisy Ogembo is a tax law scholar at the International Centre for Tax and Development (ICTD), Institute of Development Studies. Her research examines how constitutional and administrative law shape tax systems in Kenya and South Africa, and the protection of taxpayers&rsquo; rights as tax administration moves onto digital public infrastructure.</p>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="h-next">
+      <div class="margin" id="h-next">Still to come</div>
+      <ul class="coming">
+        <li>Cover</li>
+        <li>Table of contents</li>
+        <li>Publisher and publication date</li>
+        <li>Endorsements</li>
+        <li>Talks and events</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>&copy; 2026 Daisy Ogembo</span>
+    <span>Page last updated November 2026</span>
+  </footer>
+</div>
+</body>
+</html>
